@@ -33,6 +33,7 @@ class RomanNumeralGeneratorTest extends \PHPUnit_Framework_TestCase {
    */
   public function testGeneration($number, $expected) {
     $this->assertEquals($expected, $this->generator->generate($number));
+    $this->assertEquals(strtolower($expected), $this->generator->generate($number, true));
   }
 
   /**
